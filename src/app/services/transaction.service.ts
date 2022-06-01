@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Transaction } from '../Transaction';
-import { TRANSACTIONS } from '../mock-transactions';
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +9,11 @@ import { TRANSACTIONS } from '../mock-transactions';
 
 export class TransactionService {
 
-  constructor() { }
+  private apiUrl = 'http://localhost:5000/transactions'
+
+  constructor(private http: HttpClient) { }
 
   getTransactions(): Observable<Transaction[]> {
-    return of(TRANSACTIONS)
+    return this.http.get<Transaction[]>(this.apiUrl)
   }
 }

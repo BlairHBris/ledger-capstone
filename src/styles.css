@@ -14,7 +14,7 @@ body {
     max-width: 40em;
     margin: 2em auto;
     overflow: auto;
-    min-height: 50em;
+    min-height: 10em;
     border: 1px solid green;
     padding: 2em;
     border-radius: 5px;
