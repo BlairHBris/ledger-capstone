@@ -3,6 +3,5 @@ export interface Transaction {
     type: boolean
     date: string
     description: string
-
-
+    amount: number
 }

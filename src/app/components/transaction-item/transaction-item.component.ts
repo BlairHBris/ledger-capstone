@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Transaction } from 'src/app/Transaction';
+
 
 @Component({
   selector: 'app-transaction-item',
@@ -8,9 +9,9 @@ import { Transaction } from 'src/app/Transaction';
 })
 export class TransactionItemComponent implements OnInit {
 
-  @Input() transaction: Transaction | undefined
-
   constructor() { }
+  
+  @Input() transaction: Transaction | undefined
 
   ngOnInit(): void {
   }

@@ -13,7 +13,7 @@ import { TransactionItemComponent } from './components/transaction-item/transact
     HeaderComponent,
     ButtonComponent,
     TransactionsComponent,
-    TransactionItemComponent
+    TransactionItemComponent,
   ],
   imports: [
     BrowserModule

@@ -1,4 +1,8 @@
+<div class="grid-container">
+    <div *ngFor="let text of headers" class="grid-item">{{text}}</div>
+</div>
 <app-transaction-item 
 *ngFor="let transaction of transactions"
 [transaction]="transaction"
 ></app-transaction-item>
+

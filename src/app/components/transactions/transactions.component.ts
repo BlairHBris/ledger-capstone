@@ -11,6 +11,8 @@ export class TransactionsComponent implements OnInit {
 
   transactions: Transaction[] = TRANSACTIONS;
 
+  headers = ["Date", "Description", "Amount"]
+
   constructor() { }
 
   ngOnInit(): void {
