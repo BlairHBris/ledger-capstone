@@ -1,5 +1,8 @@
 <div class="grid-container">
     <div class="grid-item">{{transaction?.date}}</div>
     <div class="grid-item">{{transaction?.description}}</div>
-    <div class="grid-item">{{transaction?.amount}}</div>
+    <div class="grid-item">
+        {{transaction?.amount}}
+        <fa-icon [ngStyle]="{'color': 'red', 'margin-left': '2em'}" [icon]="faTimes"></fa-icon>
+    </div>
 </div>
