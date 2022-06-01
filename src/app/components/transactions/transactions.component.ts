@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TRANSACTIONS } from 'src/app/mock-transactions';
 import { Transaction } from 'src/app/Transaction';
 import { TransactionService} from '../../services/transaction.service';
 
@@ -23,5 +22,9 @@ export class TransactionsComponent implements OnInit {
   deleteTransaction(transaction: Transaction) {
     this.transactionService.deleteTransaction(transaction)
     .subscribe(() => this.transactions = this.transactions.filter(t => t.id !== transaction.id))
+  }
+
+  addTransaction(transaction: Transaction) {
+    this.transactionService.addTransaction(transaction).subscribe((transaction) => this.transactions.push(transaction))
   }
 }

@@ -8,3 +8,11 @@
     text-align: center;
     padding: .2em;
 }
+
+.credit {
+    background-color: rgb(195, 235, 195);
+}
+
+.debit {
+    background-color: rgb(238, 187, 197);
+}

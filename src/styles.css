@@ -15,7 +15,7 @@ body {
     margin: 2em auto;
     overflow: auto;
     min-height: 10em;
-    border: 1px solid green;
+    border: 4px solid green;
     padding: 2em;
     border-radius: 5px;
 }
@@ -26,11 +26,50 @@ body {
     background: gray;
     color: rgb(159, 218, 159);
     border: none;
-    padding: .5em 1em;
+    padding: .75em 1em;
     margin: .5em;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
     font-family: inherit;
+}
+
+.button-block {
+    display: flex;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 1em;
+    margin-right: 0;
+}
+
+.form-area {
+    margin: .2em 0;
+}
+
+.form-area label {
+    display: block;
+}
+
+.form-area input {
+    width: 100%;
+    height: 3em;
+    margin: .5em;
+    padding: .2em .2em;
+    font-size: 14px;
+}
+
+.form-area-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-area-check label {
+    flex: 1;
+}
+
+.form-area-check input {
+    flex: 2;
+    height: 2em;
 }

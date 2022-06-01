@@ -1,0 +1,19 @@
+<form (ngSubmit)="submit()">
+    <div class="form-area">
+        <label for="text">Transaction Date</label>
+        <input type="text" name="date" [(ngModel)]="date" id="date" placeholder="Add Transaction Date">
+    </div>
+    <div class="form-area">
+        <label for="text">Transaction Description</label>
+        <input type="text" name="text" [(ngModel)]="text" id="text" placeholder="Add Transaction Description">
+    </div>
+    <div class="form-area">
+        <label for="text">Transaction Amount</label>
+        <input type="text" name="amount" [(ngModel)]="amount" id="amount" placeholder="Add Transaction Amount">
+    </div>
+    <div class="form-area form-area-check">
+        <label for="text">Is this a Credit?</label>
+        <input type="checkbox" name="credit" [(ngModel)]="credit" id="credit" >
+    </div>
+    <input type="submit" value="Add Transaction" class="button button-block">
+</form>
