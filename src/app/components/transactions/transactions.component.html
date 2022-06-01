@@ -3,6 +3,7 @@
 </div>
 <app-transaction-item 
 *ngFor="let transaction of transactions"
-[transaction]="transaction"
+[transaction]="transaction" 
+(deleteTransaction)="deleteTransaction(transaction)"
 ></app-transaction-item>
 
