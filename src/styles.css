@@ -19,3 +19,18 @@ body {
     padding: 2em;
     border-radius: 5px;
 }
+
+
+.button {
+    display: inline-block;
+    background: gray;
+    color: rgb(159, 218, 159);
+    border: none;
+    padding: .5em 1em;
+    margin: .5em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+}
