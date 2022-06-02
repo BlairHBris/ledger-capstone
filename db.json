@@ -5,7 +5,7 @@
       "credit": false,
       "date": "6/1/2022",
       "description": "McDonald's",
-      "amount": 15.42
+      "amount": -15.42
     },
     {
       "id": 2,
@@ -17,23 +17,16 @@
     {
       "date": "5/15/2022",
       "description": "Bar",
-      "amount": "50",
+      "amount": -50,
       "credit": false,
       "id": 3
     },
     {
       "date": "5/15/2022",
       "description": "Paycheck",
-      "amount": "1000",
+      "amount": 1000,
       "credit": true,
       "id": 5
-    },
-    {
-      "date": "6/3/2022",
-      "description": "Venmo",
-      "amount": "100",
-      "credit": true,
-      "id": 6
     }
   ]
 }
