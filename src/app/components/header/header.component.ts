@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UiService } from 'src/app/services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +10,18 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   title: string = 'Ledger';
+  showAddTransaction: boolean = false
+  subscription: Subscription
 
-  constructor() { }
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(boolean => this.showAddTransaction = boolean)
+  }
 
   ngOnInit(): void {
   }
 
   toggleAddTransaction() {
-    console.log("Toggel")
+    this.uiService.toggleAddTransaction()
   }
 
 }

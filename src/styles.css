@@ -24,7 +24,6 @@ body {
 .button {
     display: inline-block;
     background: gray;
-    color: rgb(159, 218, 159);
     border: none;
     padding: .75em 1em;
     margin: .5em;
@@ -41,6 +40,7 @@ body {
     margin-left: 0;
     margin-bottom: 1em;
     margin-right: 0;
+    color: rgb(159, 218, 159);
 }
 
 .form-area {

@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Transaction } from 'src/app/Transaction';
+import { UiService } from 'src/app/services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-add-transaction',
@@ -14,8 +16,12 @@ export class AddTransactionComponent implements OnInit {
   text: string | undefined
   amount: number | undefined
   credit: boolean = false;
+  showAddTransaction: boolean = false
+  subscription: Subscription
 
-  constructor() { }
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(boolean => this.showAddTransaction = boolean)
+  }
 
   ngOnInit(): void {
   }
