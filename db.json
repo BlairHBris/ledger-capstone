@@ -27,6 +27,13 @@
       "amount": "1000",
       "credit": true,
       "id": 5
+    },
+    {
+      "date": "6/3/2022",
+      "description": "Venmo",
+      "amount": "100",
+      "credit": true,
+      "id": 6
     }
   ]
 }
