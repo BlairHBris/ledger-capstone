@@ -41,6 +41,16 @@ export class AddTransactionComponent implements OnInit {
       return
     }
 
+    if(this.credit == false && this.amount > 0) {
+      alert('A Debit cannot be positive')
+      return
+    }
+
+    if(this.credit == true && this.amount < 0) {
+      alert('A Credit cannot be negative')
+      return
+    }
+
     const newTransaction = {
       date: this.date,
       description: this.text,
