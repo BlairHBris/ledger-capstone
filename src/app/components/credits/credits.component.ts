@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { filter } from 'rxjs';
+import { Transaction } from 'src/app/Transaction';
+import { TransactionService} from '../../services/transaction.service';
 
 @Component({
   selector: 'app-credits',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreditsComponent implements OnInit {
 
-  constructor() { }
+  transactions: Transaction[] = [];
+
+  headers = ["Date", "Description", "Amount"]
+
+  constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
+    this.transactionService.getCreditTransactions().subscribe((transactions) => this.transactions = transactions.filter(t => t.credit==true))
   }
 
+  deleteTransaction(transaction: Transaction) {
+    this.transactionService.deleteTransaction(transaction)
+    .subscribe(() => this.transactions = this.transactions.filter(t => t.id !== transaction.id))
+  }
+
+  addTransaction(transaction: Transaction) {
+    this.transactionService.addTransaction(transaction).subscribe((transaction) => this.transactions.push(transaction))
+  }
 }

@@ -23,6 +23,10 @@ export class TransactionService {
     return this.http.get<Transaction[]>(this.apiUrl)
   }
 
+  getCreditTransactions(): Observable<Transaction[]> {
+    return this.http.get<Transaction[]>(this.apiUrl)
+  }
+
   deleteTransaction(transaction: Transaction): Observable<Transaction> {
     const url = `${this.apiUrl}/${transaction.id}`
     return this.http.delete<Transaction>(url)

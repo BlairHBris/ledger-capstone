@@ -1,1 +1,9 @@
-<p>credits works!</p>
+<app-add-transaction (addTransaction)="addTransaction($event)"></app-add-transaction>
+<div class="grid-container">
+    <div *ngFor="let text of headers" class="grid-item">{{text}}</div>
+</div>
+<app-transaction-item 
+*ngFor="let transaction of transactions"
+[transaction]="transaction" 
+(deleteTransaction)="deleteTransaction(transaction)"
+></app-transaction-item>
