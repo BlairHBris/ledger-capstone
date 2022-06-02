@@ -13,11 +13,13 @@ import { TransactionItemComponent } from './components/transaction-item/transact
 import { AddTransactionComponent } from './components/add-transaction/add-transaction.component';
 import { LinksComponent } from './components/links/links.component';
 import { CreditsComponent } from './components/credits/credits.component';
+import { DebitsComponent } from './components/debits/debits.component';
 
 const appRoutes: Routes = [
   {path:'', component: LinksComponent},
   {path:'transactions', component: TransactionsComponent},
-  {path:'credits', component: CreditsComponent}
+  {path:'credits', component: CreditsComponent},
+  {path:'debits', component: DebitsComponent}
 ]
 
 @NgModule({
@@ -30,6 +32,7 @@ const appRoutes: Routes = [
     AddTransactionComponent,
     LinksComponent,
     CreditsComponent,
+    DebitsComponent,
   ],
   imports: [
     BrowserModule,

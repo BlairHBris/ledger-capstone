@@ -3,11 +3,11 @@ import { Transaction } from 'src/app/Transaction';
 import { TransactionService} from '../../services/transaction.service';
 
 @Component({
-  selector: 'app-credits',
-  templateUrl: './credits.component.html',
-  styleUrls: ['./credits.component.css']
+  selector: 'app-debits',
+  templateUrl: './debits.component.html',
+  styleUrls: ['./debits.component.css']
 })
-export class CreditsComponent implements OnInit {
+export class DebitsComponent implements OnInit {
 
   transactions: Transaction[] = [];
 
@@ -16,7 +16,7 @@ export class CreditsComponent implements OnInit {
   constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
-    this.transactionService.getCreditTransactions().subscribe((transactions) => this.transactions = transactions.filter(t => t.credit==true))
+    this.transactionService.getCreditTransactions().subscribe((transactions) => this.transactions = transactions.filter(t => t.credit==false))
   }
 
   deleteTransaction(transaction: Transaction) {
