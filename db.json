@@ -3,30 +3,37 @@
     {
       "id": 1,
       "credit": false,
-      "date": "6/1/2022",
+      "date": "2022-06-01",
       "description": "McDonald's",
       "amount": -15.42
     },
     {
       "id": 2,
       "credit": true,
-      "date": "5/31/2022",
+      "date": "2022-05-31",
       "description": "Paycheck",
       "amount": 1000
     },
     {
-      "date": "5/15/2022",
+      "date": "2022-05-15",
       "description": "Bar",
       "amount": -50,
       "credit": false,
       "id": 3
     },
     {
-      "date": "5/15/2022",
+      "date": "2022-05-15",
       "description": "Paycheck",
       "amount": 1000,
       "credit": true,
       "id": 5
+    },
+    {
+      "date": "2022-06-02",
+      "description": "Test",
+      "amount": -50,
+      "credit": false,
+      "id": 6
     }
   ]
 }
