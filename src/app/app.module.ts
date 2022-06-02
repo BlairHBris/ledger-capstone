@@ -11,9 +11,11 @@ import { ButtonComponent } from './components/button/button.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { TransactionItemComponent } from './components/transaction-item/transaction-item.component';
 import { AddTransactionComponent } from './components/add-transaction/add-transaction.component';
+import { LinksComponent } from './components/links/links.component';
 
 const appRoutes: Routes = [
-  {path:'', component: TransactionsComponent}
+  {path:'', component: LinksComponent},
+  {path:'transactions', component: TransactionsComponent}
 ]
 
 @NgModule({
@@ -24,6 +26,7 @@ const appRoutes: Routes = [
     TransactionsComponent,
     TransactionItemComponent,
     AddTransactionComponent,
+    LinksComponent,
   ],
   imports: [
     BrowserModule,
