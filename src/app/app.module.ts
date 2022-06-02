@@ -12,10 +12,12 @@ import { TransactionsComponent } from './components/transactions/transactions.co
 import { TransactionItemComponent } from './components/transaction-item/transaction-item.component';
 import { AddTransactionComponent } from './components/add-transaction/add-transaction.component';
 import { LinksComponent } from './components/links/links.component';
+import { CreditsComponent } from './components/credits/credits.component';
 
 const appRoutes: Routes = [
   {path:'', component: LinksComponent},
-  {path:'transactions', component: TransactionsComponent}
+  {path:'transactions', component: TransactionsComponent},
+  {path:'credits', component: CreditsComponent}
 ]
 
 @NgModule({
@@ -27,6 +29,7 @@ const appRoutes: Routes = [
     TransactionItemComponent,
     AddTransactionComponent,
     LinksComponent,
+    CreditsComponent,
   ],
   imports: [
     BrowserModule,
