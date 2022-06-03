@@ -9,22 +9,22 @@ const httpOptions = {
   })
 }
 
+type TransactionsResponse = {
+  transactions: Transaction[]
+}
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class TransactionService {
 
-  private apiUrl = 'http://localhost:5000/transactions'
+  private apiUrl = 'https://ledger-capstone-api.herokuapp.com/transactions'
 
   constructor(private http: HttpClient) { }
 
-  getTransactions(): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(this.apiUrl)
-  }
-
-  getCreditTransactions(): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(this.apiUrl)
+  getTransactions(){
+    return this.http.get<TransactionsResponse>(this.apiUrl)
   }
 
   deleteTransaction(transaction: Transaction): Observable<Transaction> {

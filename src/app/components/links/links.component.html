@@ -2,5 +2,5 @@
     <a routerLink="../transactions">All</a>
     <a routerLink="../credits">Credits</a>
     <a routerLink="../debits">Debits</a>
-    <a routerLink="/">Close Out</a>
+    <a *ngIf="!hasRoute('/')" routerLink="/">Close Out</a>
 </div>

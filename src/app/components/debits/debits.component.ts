@@ -16,7 +16,7 @@ export class DebitsComponent implements OnInit {
   constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
-    this.transactionService.getCreditTransactions().subscribe((transactions) => this.transactions = transactions.filter(t => t.credit==false))
+    this.transactionService.getTransactions().subscribe(response => this.transactions = response.transactions.filter(t => t.credit==false))
   }
 
   deleteTransaction(transaction: Transaction) {

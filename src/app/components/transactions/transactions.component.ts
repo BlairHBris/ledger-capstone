@@ -16,7 +16,7 @@ export class TransactionsComponent implements OnInit {
   constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
-    this.transactionService.getTransactions().subscribe((transactions) => this.transactions = transactions)
+    this.transactionService.getTransactions().subscribe(response => this.transactions = response.transactions)
   }
 
   deleteTransaction(transaction: Transaction) {
