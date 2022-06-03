@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   title: string = 'Ledger';
-  showAddTransaction: boolean = false
+  showAddTransaction: boolean = true
   subscription: Subscription
 
   constructor(private uiService: UiService, private router: Router) {

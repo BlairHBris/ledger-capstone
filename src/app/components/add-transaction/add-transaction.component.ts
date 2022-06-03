@@ -16,7 +16,7 @@ export class AddTransactionComponent implements OnInit {
   text: string | undefined
   amount: number | undefined
   credit: boolean = false;
-  showAddTransaction: boolean = false
+  showAddTransaction: boolean = true
   subscription: Subscription
 
   constructor(private uiService: UiService) {
@@ -64,6 +64,10 @@ export class AddTransactionComponent implements OnInit {
     this.text = ''
     this.amount = 0
     this.credit = false
+  }
+
+  reloadCurrentPage() {
+    window.location.reload();
   }
 
 }

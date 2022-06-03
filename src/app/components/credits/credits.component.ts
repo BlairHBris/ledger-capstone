@@ -25,6 +25,6 @@ export class CreditsComponent implements OnInit {
   }
 
   addTransaction(transaction: Transaction) {
-    this.transactionService.addTransaction(transaction).subscribe((transaction) => this.transactions.filter(t => t.credit==true).push(transaction))
+    this.transactionService.addTransaction(transaction).subscribe(response => this.transactions.filter(t => t.credit==true).push(transaction))
   }
 }

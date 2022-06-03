@@ -13,6 +13,10 @@ type TransactionsResponse = {
   transactions: Transaction[]
 }
 
+type TransactionResponse = {
+  transaction: Transaction
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -32,7 +36,7 @@ export class TransactionService {
     return this.http.delete<Transaction>(url)
   }
 
-  addTransaction(transaction: Transaction): Observable<Transaction> {
-    return this.http.post<Transaction>(this.apiUrl, transaction, httpOptions)
+  addTransaction(transaction: Transaction) {
+    return this.http.post<TransactionResponse>(this.apiUrl, transaction, httpOptions)
   }
 }
