@@ -26,7 +26,7 @@ export class AddTransactionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit() {
+  addNewTransaction(newTransaction: Transaction) {
     if(!this.date) {
       alert('Please add a transaction date')
       return
@@ -51,14 +51,14 @@ export class AddTransactionComponent implements OnInit {
       return
     }
 
-    const newTransaction = {
+    const addedTransaction = {
       date: this.date,
       description: this.text,
       amount: this.amount,
       credit: this.credit
     }
 
-    this.addTransaction.emit(newTransaction)
+    this.addTransaction.emit(addedTransaction)
 
     this.date = ''
     this.text = ''

@@ -1,4 +1,4 @@
-<form *ngIf="showAddTransaction" (ngSubmit)="submit()">
+<form #newTransactionForm="ngForm" *ngIf="showAddTransaction" (ngSubmit)="addNewTransaction(newTransactionForm.value)">
     <div class="form-area">
         <label for="text">Transaction Date</label>
         <input type="date" name="date" [(ngModel)]="date" id="date" placeholder="Add Transaction Date">
