@@ -4,7 +4,4 @@
     <a routerLink="../debits">Debits</a>
     <a *ngIf="!hasRoute('/')" routerLink="/">Close Out</a>
 </div>
-
-<div class="account-filter">
-    <h2>Filter by Account</h2>
-</div>
+<app-account-links></app-account-links>

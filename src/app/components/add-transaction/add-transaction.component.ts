@@ -17,7 +17,7 @@ export class AddTransactionComponent implements OnInit {
   account: string | undefined
   amount: number | undefined
   credit: boolean = false;
-  showAddTransaction: boolean = true
+  showAddTransaction: boolean = false
   subscription: Subscription
 
   constructor(private uiService: UiService) {

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class LinksComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -17,3 +17,4 @@ export class LinksComponent implements OnInit {
     return this.router.url === route
   }
 }
+
