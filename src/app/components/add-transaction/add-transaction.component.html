@@ -5,7 +5,12 @@
     </div>
     <div class="form-area">
         <label for="text">Affected Account</label>
-        <input type="text" name="account" [(ngModel)]="account" id="account" placeholder="Add Affected Account">
+        <select name="account" [(ngModel)]="account" id="account">
+            <option value="Checking">Checking</option>
+            <option value="Credit">Credit</option>
+            <option value="Savings">Savings</option>
+            <option value="Investment">Investment</option>
+        </select>
     </div>
     <div class="form-area">
         <label for="text">Transaction Description</label>
