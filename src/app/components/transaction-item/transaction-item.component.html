@@ -1,5 +1,6 @@
 <div [ngClass]="{debit: !transaction?.credit, credit: transaction?.credit}" class="grid-container">
     <div class="grid-item">{{transaction?.date}}</div>
+    <div class="grid-item">{{transaction?.account}}</div>
     <div class="grid-item">{{transaction?.description}}</div>
     <div class="grid-item">
         ${{transaction?.amount}}

@@ -14,6 +14,7 @@ export class AddTransactionComponent implements OnInit {
   
   date: string | undefined
   text: string | undefined
+  account: string | undefined
   amount: number | undefined
   credit: boolean = false;
   showAddTransaction: boolean = true
@@ -31,6 +32,12 @@ export class AddTransactionComponent implements OnInit {
       alert('Please add a transaction date')
       return
     }
+
+    if(!this.account) {
+      alert('Please add an affected account')
+      return
+    }
+
     if(!this.text) {
       alert('Please add a transaction description')
       return
@@ -53,6 +60,7 @@ export class AddTransactionComponent implements OnInit {
 
     const addedTransaction = {
       date: this.date,
+      account: this.account,
       description: this.text,
       amount: this.amount,
       credit: this.credit
@@ -61,13 +69,9 @@ export class AddTransactionComponent implements OnInit {
     this.addTransaction.emit(addedTransaction)
 
     this.date = ''
+    this.account = ''
     this.text = ''
     this.amount = 0
     this.credit = false
   }
-
-  reloadCurrentPage() {
-    window.location.reload();
-  }
-
 }

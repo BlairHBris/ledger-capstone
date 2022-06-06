@@ -1,7 +1,11 @@
 <form #newTransactionForm="ngForm" *ngIf="showAddTransaction" (ngSubmit)="addNewTransaction(newTransactionForm.value)">
     <div class="form-area">
         <label for="text">Transaction Date</label>
-        <input type="date" name="date" [(ngModel)]="date" id="date" placeholder="Add Transaction Date">
+        <input type="date" name="date" [(ngModel)]="date" id="date">
+    </div>
+    <div class="form-area">
+        <label for="text">Affected Account</label>
+        <input type="text" name="account" [(ngModel)]="account" id="account" placeholder="Add Affected Account">
     </div>
     <div class="form-area">
         <label for="text">Transaction Description</label>

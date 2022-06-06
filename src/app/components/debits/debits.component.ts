@@ -11,7 +11,7 @@ export class DebitsComponent implements OnInit {
 
   transactions: Transaction[] = [];
 
-  headers = ["Date", "Description", "Amount"]
+  headers = ["Date", "Account", "Description", "Amount"]
 
   constructor(private transactionService: TransactionService) { }
 
