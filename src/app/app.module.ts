@@ -14,12 +14,14 @@ import { AddTransactionComponent } from './components/add-transaction/add-transa
 import { LinksComponent } from './components/links/links.component';
 import { CreditsComponent } from './components/credits/credits.component';
 import { DebitsComponent } from './components/debits/debits.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   {path:'', component: LinksComponent},
   {path:'transactions', component: TransactionsComponent},
   {path:'credits', component: CreditsComponent},
-  {path:'debits', component: DebitsComponent}
+  {path:'debits', component: DebitsComponent},
+  {path:'**', pathMatch: 'full', component: PageNotFoundComponent}
 ]
 
 @NgModule({
@@ -33,6 +35,7 @@ const appRoutes: Routes = [
     LinksComponent,
     CreditsComponent,
     DebitsComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

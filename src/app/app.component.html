@@ -1,5 +1,5 @@
 <div class="container">
-    <app-header></app-header>
+    <app-header *ngIf="!hasRoute('/full')"></app-header>
     <app-links *ngIf="!hasRoute('/')"></app-links>
     <router-outlet></router-outlet>
 </div>
