@@ -6,11 +6,13 @@
     <div class="form-area">
         <label for="text">Affected Account</label>
         <select name="account" [(ngModel)]="account" id="account">
+            <option hidden [value]="">Select your Option</option>
             <option value="Checking">Checking</option>
             <option value="Credit">Credit</option>
             <option value="Savings">Savings</option>
             <option value="Investment">Investment</option>
         </select>
+
     </div>
     <div class="form-area">
         <label for="text">Transaction Description</label>
