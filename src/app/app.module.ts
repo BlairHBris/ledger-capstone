@@ -17,6 +17,9 @@ import { DebitsComponent } from './components/debits/debits.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CreditComponent } from './components/credit/credit.component';
 import { AccountLinksComponent } from './components/account-links/account-links.component';
+import { CheckingComponent } from './components/checking/checking.component';
+import { InvestmentComponent } from './components/investment/investment.component';
+import { SavingsComponent } from './components/savings/savings.component';
 
 const appRoutes: Routes = [
   {path:'', component: LinksComponent},
@@ -24,6 +27,9 @@ const appRoutes: Routes = [
   {path:'credits', component: CreditsComponent},
   {path:'debits', component: DebitsComponent},
   {path:'credit', component: CreditComponent},
+  {path:'checking', component: CheckingComponent},
+  {path:'investment', component: InvestmentComponent},
+  {path:'savings', component: SavingsComponent},
   {path:'**', pathMatch: 'full', component: PageNotFoundComponent}
 ]
 
@@ -40,7 +46,10 @@ const appRoutes: Routes = [
     DebitsComponent,
     PageNotFoundComponent,
     CreditComponent,
-    AccountLinksComponent
+    AccountLinksComponent,
+    CheckingComponent,
+    InvestmentComponent,
+    SavingsComponent
   ],
   imports: [
     BrowserModule,
