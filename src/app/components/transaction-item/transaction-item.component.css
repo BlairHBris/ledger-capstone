@@ -4,15 +4,15 @@
 }
 
 .grid-item {
-    border: 1px solid black;
+    border: 1px solid rgb(139, 139, 139);
     text-align: center;
     padding: .2em;
 }
 
 .credit {
-    background-color: rgb(195, 235, 195);
+    background-color: rgb(211, 240, 211);
 }
 
 .debit {
-    background-color: rgb(238, 187, 197);
+    background-color: rgb(241, 216, 222);
 }

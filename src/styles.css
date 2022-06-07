@@ -28,7 +28,7 @@ body {
 
 .button {
     display: inline-block;
-    background: gray;
+    background: rgb(170, 170, 170);
     border: none;
     padding: .75em 1em;
     margin: .5em;
@@ -37,7 +37,7 @@ body {
     text-decoration: none;
     font-size: 15px;
     font-family: inherit;
-    color: rgb(159, 218, 159);
+    color: rgb(139, 190, 139);
 }
 
 .button-block {
