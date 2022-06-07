@@ -17,7 +17,11 @@ export class CreditsComponent implements OnInit {
   constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
-    this.transactionService.getTransactions().subscribe(response => this.transactions = response.transactions.filter(response => response.credit==true))
+    this.transactionService.getTransactions().subscribe(response => this.transactions = response.transactions.filter(response => response.credit==true).sort((a, b) => {
+      const da = new Date(a.date)
+      const db = new Date(b.date)
+      return da.getTime() - db.getTime()
+    }))
   }
 
   deleteTransaction(transaction: Transaction) {
@@ -27,7 +31,11 @@ export class CreditsComponent implements OnInit {
 
   addTransaction(transaction: Transaction) {
     this.transactionService.addTransaction(transaction).subscribe(response => {
-      this.transactions = [...this.transactions, response.transaction].filter(transaction => transaction.credit == true)
+      this.transactions = [...this.transactions, response.transaction].filter(transaction => transaction.credit == true).sort((a, b) => {
+        const da = new Date(a.date)
+        const db = new Date(b.date)
+        return da.getTime() - db.getTime()
+      })
     })
   }
 }

@@ -16,7 +16,11 @@ export class SavingsComponent implements OnInit {
   constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
-    this.transactionService.getTransactions().subscribe(response => this.transactions = response.transactions.filter(t => t.account=='Savings'))
+    this.transactionService.getTransactions().subscribe(response => this.transactions = response.transactions.filter(t => t.account=='Savings').sort((a, b) => {
+      const da = new Date(a.date)
+      const db = new Date(b.date)
+      return da.getTime() - db.getTime()
+    }))
   }
 
   deleteTransaction(transaction: Transaction) {
@@ -25,6 +29,12 @@ export class SavingsComponent implements OnInit {
   }
 
   addTransaction(transaction: Transaction) {
-    this.transactionService.addTransaction(transaction).subscribe(response => this.transactions.filter(t => t.account=='Savings').push(transaction))
+    this.transactionService.addTransaction(transaction).subscribe(response => {
+      this.transactions = [...this.transactions, response.transaction].filter(transaction => transaction.account == "Investment").sort((a, b) => {
+        const da = new Date(a.date)
+        const db = new Date(b.date)
+        return da.getTime() - db.getTime()
+      })
+    })
   }
 }
