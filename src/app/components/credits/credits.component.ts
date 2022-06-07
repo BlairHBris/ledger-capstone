@@ -17,7 +17,7 @@ export class CreditsComponent implements OnInit {
   constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
-    this.transactionService.getTransactions().subscribe(response => this.transactions = response.transactions.filter(t => t.credit==true))
+    this.transactionService.getTransactions().subscribe(response => this.transactions = response.transactions.filter(response => response.credit==true))
   }
 
   deleteTransaction(transaction: Transaction) {
@@ -26,6 +26,8 @@ export class CreditsComponent implements OnInit {
   }
 
   addTransaction(transaction: Transaction) {
-    this.transactionService.addTransaction(transaction).subscribe(response => this.transactions.filter(t => t.credit==true).push(transaction))
+    this.transactionService.addTransaction(transaction).subscribe(response => {
+      this.transactions = [...this.transactions, response.transaction].filter(transaction => transaction.credit == true)
+    })
   }
 }

@@ -25,6 +25,8 @@ export class DebitsComponent implements OnInit {
   }
 
   addTransaction(transaction: Transaction) {
-    this.transactionService.addTransaction(transaction).subscribe(repsonse => this.transactions.filter(t => t.credit==false).push(transaction))
+    this.transactionService.addTransaction(transaction).subscribe(response => {
+      this.transactions = [...this.transactions, response.transaction].filter(transaction => transaction.credit == false)
+    })
   }
 }

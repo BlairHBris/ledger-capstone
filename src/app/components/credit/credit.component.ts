@@ -27,6 +27,8 @@ export class CreditComponent implements OnInit {
   }
 
   addTransaction(transaction: Transaction) {
-    this.transactionService.addTransaction(transaction).subscribe(response => this.transactions.filter(t => t.account=='Credit').push(transaction))
+    this.transactionService.addTransaction(transaction).subscribe(response => {
+      this.transactions = [...this.transactions, response.transaction].filter(transaction => transaction.account == "Credit")
+    })
   }
 }

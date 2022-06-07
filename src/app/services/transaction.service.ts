@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Transaction } from '../Transaction';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 
@@ -25,9 +25,9 @@ export class TransactionService {
 
   private apiUrl = 'https://ledger-capstone-api.herokuapp.com/transactions'
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getTransactions(){
+  getTransactions() {
     return this.http.get<TransactionsResponse>(this.apiUrl)
   }
 

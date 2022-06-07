@@ -25,6 +25,8 @@ export class CheckingComponent implements OnInit {
   }
 
   addTransaction(transaction: Transaction) {
-    this.transactionService.addTransaction(transaction).subscribe(response => this.transactions.filter(t => t.account=='Checking').push(transaction))
+    this.transactionService.addTransaction(transaction).subscribe(response => {
+      this.transactions = [...this.transactions, response.transaction].filter(transaction => transaction.account == "Checking")
+    })
   }
 }

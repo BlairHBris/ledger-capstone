@@ -26,7 +26,6 @@ export class TransactionsComponent implements OnInit {
 
   addTransaction(transaction: Transaction) {
     this.transactionService.addTransaction(transaction).subscribe(response => {
-      console.log(response.transaction)
       this.transactions = [...this.transactions, response.transaction]
     })
   }
