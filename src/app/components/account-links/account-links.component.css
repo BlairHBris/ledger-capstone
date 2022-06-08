@@ -14,24 +14,17 @@ a {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
-    a {
-        font-size: .75em;
-    }
-}
-
 .account-filter {
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 h2 {
     margin-top: 1em;
 }
 
-#account-router {
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 3em;
-    font-size: 1em;
+@media only screen and (max-width: 600px) {
+    a {
+        font-size: .75em;
+    }
 }
