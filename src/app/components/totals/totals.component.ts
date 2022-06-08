@@ -20,7 +20,7 @@ export class TotalsComponent implements OnInit {
   savingsTotal: number = 0
   total: number = 0
 
-  constructor(private transactionService: TransactionService) { }
+  constructor(private transactionService: TransactionService) {}
 
   ngOnInit(): void {
     this.transactionService.getTransactions().subscribe(response => {
