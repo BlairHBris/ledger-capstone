@@ -1,13 +1,11 @@
-div {
+.accounts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-p {
+h2, h3 {
     text-align: center;
-    text-decoration: none;
-    color:  rgb(161, 160, 160);
-    margin-bottom: 1.5em;
+    padding-bottom: 1em;
 }
 
 

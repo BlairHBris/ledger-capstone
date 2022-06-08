@@ -9,7 +9,10 @@ import { TransactionService} from '../../services/transaction.service';
 })
 export class TotalsComponent implements OnInit {
 
-  transactions: Transaction[] = [];
+  checkingTransactions: Transaction[] = [];
+  creditTransactions: Transaction[] = [];
+  investmentTransactions: Transaction[] = [];
+  savingsTransactions: Transaction[] = [];
 
   checkingTotal: number = 0
   creditTotal: number = 0
@@ -19,12 +22,25 @@ export class TotalsComponent implements OnInit {
 
   constructor(private transactionService: TransactionService) { }
 
-  ngOnInit(): any {
+  ngOnInit(): void {
     this.transactionService.getTransactions().subscribe(response => {
-      this.transactions = response.transactions.filter(t => t.account=='Checking')
-      this.transactions.forEach((transaction) => {
+      this.checkingTransactions = response.transactions.filter(t => t.account=='Checking')
+      this.checkingTransactions.forEach((transaction) => {
         this.checkingTotal += transaction.amount
       })
+      this.creditTransactions = response.transactions.filter(t => t.account=='Credit')
+      this.creditTransactions.forEach((transaction) => {
+        this.creditTotal += transaction.amount
+      })
+      this.investmentTransactions = response.transactions.filter(t => t.account=='Investment')
+      this.investmentTransactions.forEach((transaction) => {
+        this.investmentTotal += transaction.amount
+      })
+      this.savingsTransactions = response.transactions.filter(t => t.account=='Savings')
+      this.savingsTransactions.forEach((transaction) => {
+        this.savingsTotal += transaction.amount
+      })
+      this.total = this.checkingTotal + this.creditTotal + this.investmentTotal + this.savingsTotal
     })
   }
 }
