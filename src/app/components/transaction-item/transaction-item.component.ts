@@ -7,6 +7,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './transaction-item.component.html',
   styleUrls: ['./transaction-item.component.css']
 })
+
 export class TransactionItemComponent implements OnInit {
 
   @Input() transaction: Transaction | undefined

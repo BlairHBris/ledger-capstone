@@ -13,7 +13,7 @@ export class TransactionsComponent implements OnInit {
 
   headers = ["Date", "Account", "Description", "Amount"]
 
-  constructor(private transactionService: TransactionService) { }
+  constructor(private transactionService: TransactionService) {}
 
   ngOnInit(): void {
     this.transactionService.getTransactions().subscribe(response => this.transactions = response.transactions.sort((a, b) => {

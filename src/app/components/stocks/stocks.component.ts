@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StockService } from 'src/app/services/stock.service';
 
 @Component({
   selector: 'app-stocks',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StocksComponent implements OnInit {
 
-  constructor() { }
+  stockNames = ["SNP"]
+
+  stocks: any = []
+
+  constructor(private stockService: StockService) {}
 
   ngOnInit(): void {
+    this.stockNames.forEach((stockName) => {
+      this.stockService.getStock(stockName).subscribe(response => {
+        this.stocks = response
+        console.log(this.stocks)
+      })
+    })
+
   }
 
 }
