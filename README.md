@@ -5,7 +5,7 @@ tracking by account and type of transaction. Account balances are also displayed
 
 Project Link: https://ledger-by-bb.netlify.app/
 
-![](https://paste.pics/H7ES2.png)
+![](https://i2.paste.pics/H7ES2.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
 
