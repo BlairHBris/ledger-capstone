@@ -21,8 +21,6 @@ import { CheckingComponent } from './components/checking/checking.component';
 import { InvestmentComponent } from './components/investment/investment.component';
 import { SavingsComponent } from './components/savings/savings.component';
 import { TotalsComponent } from './components/totals/totals.component';
-import { StocksComponent } from './components/stocks/stocks.component';
-import { StockComponent } from './components/stock/stock.component';
 
 const appRoutes: Routes = [
   {path:'', component: LinksComponent},
@@ -54,8 +52,6 @@ const appRoutes: Routes = [
     InvestmentComponent,
     SavingsComponent,
     TotalsComponent,
-    StocksComponent,
-    StockComponent
   ],
   imports: [
     BrowserModule,
