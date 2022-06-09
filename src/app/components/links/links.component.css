@@ -6,8 +6,9 @@ div {
 a {
     text-align: center;
     text-decoration: none;
-    color: rgb(107, 107, 107);
-    background-color: rgb(190, 231, 190);
+    color: rgb(194, 193, 193);
+    background-color: rgb(211, 240, 211);
+    box-shadow: 5px 5px rgb(194, 193, 193);
     padding: .5em;
     margin: 1em;
     border-radius: 5px;
