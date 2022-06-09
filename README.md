@@ -1,4 +1,9 @@
-# Ledger
+# An Investor's Ledger
+
+For my Capstone project I decided to crete a Ledger application that takes user input in order to track their personal finances. This includes 
+tracking by account and type of transaction. Account balances are also displayed at all times and update when the ledger is finalized.
+
+![](https://paste.pics/H7ES2)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
 
