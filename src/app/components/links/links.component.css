@@ -8,28 +8,18 @@ a {
     text-decoration: none;
     padding: .5em;
     margin: 1em;
+    color: black;
+    border: 2px solid rgb(235, 243, 235);;
     border-radius: 5px;
     cursor: pointer;
+}
+
+a:hover {
+    background-color: rgb(235, 243, 235);;
 }
 
 @media only screen and (max-width: 600px) {
     a {
         font-size: .75em;
     }
-}
-
-.account-filter {
-    margin-top: 1em;
-    margin-bottom: 2em;
-}
-
-h2 {
-    margin-top: 1em;
-}
-
-#account-router {
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 3em;
-    font-size: 1em;
 }
