@@ -9,15 +9,14 @@ import { ApiService } from 'src/app/services/api.service';
 
 export class NewsComponent implements OnInit {
 
-  articles: any
+  stocks: any
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getNews().subscribe((response: any) => {
+    this.apiService.getStocks().subscribe((response: any) => {
       console.log(response)
-      this.articles = response['articles']
+      this.stocks = response
     })
   }
-
 }
