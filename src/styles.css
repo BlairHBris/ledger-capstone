@@ -83,12 +83,11 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: lightslategray;
+    background-color: #e4e7ea;
     font-size: 1.25em;
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgb(139, 139, 139);
     text-align: center;
     padding: .25em;

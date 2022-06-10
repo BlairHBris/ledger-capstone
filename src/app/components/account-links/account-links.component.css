@@ -1,27 +1,22 @@
 div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #e4e7ea;
+    display: flex;
+    border: 1px rgb(139, 139, 139) solid;
 }
 
 a {
     text-align: center;
     text-decoration: none;
-    color:  rgb(173, 201, 173);
-    background-color: rgb(230, 227, 227);
-    box-shadow: 5px 5px rgb(211, 240, 211);
-    padding: .5em;
-    margin: 1em;
-    border-radius: 5px;
+    font-size: 1.5em;
+    color: black;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
     cursor: pointer;
 }
 
-.account-filter {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-h2 {
-    margin-top: 1em;
+.active {
+    background-color: #b5b5b6;
+    border-radius: 5px;
 }
 
 @media only screen and (max-width: 600px) {
