@@ -3,9 +3,12 @@
 For my Capstone project I decided to crete a Ledger application that takes user input in order to track their personal finances. This includes 
 tracking by account and type of transaction. Account balances are also displayed at all times and update when the ledger is finalized.
 
+There is also a section for stock prices to be displayed that are taken from a third party api. On deployment these sections populate with 
+popular stocks, but for the purposes of keeping within my api key call limit they are not shown in the image below.
+
 Project Link: https://ledger-by-bb.netlify.app/
 
-![](https://i2.paste.pics/H7ES2.png)
+![](https://paste.pics/H7Q7P.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
 
