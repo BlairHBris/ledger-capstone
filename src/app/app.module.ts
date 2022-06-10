@@ -22,6 +22,8 @@ import { InvestmentComponent } from './components/investment/investment.componen
 import { SavingsComponent } from './components/savings/savings.component';
 import { TotalsComponent } from './components/totals/totals.component';
 import { NewsComponent } from './components/news/news.component';
+import { ColumnHeadersComponent } from './components/column-headers/column-headers.component';
+import { TableHeadingComponent } from './components/table-heading/table-heading.component';
 
 const appRoutes: Routes = [
   {path:'', component: LinksComponent},
@@ -54,6 +56,8 @@ const appRoutes: Routes = [
     SavingsComponent,
     TotalsComponent,
     NewsComponent,
+    ColumnHeadersComponent,
+    TableHeadingComponent,
   ],
   imports: [
     BrowserModule,

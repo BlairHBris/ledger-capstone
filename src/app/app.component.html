@@ -2,6 +2,7 @@
     <app-header *ngIf="!hasRoute('/full')"></app-header>
     <app-links *ngIf="!hasRoute('/')"></app-links>
     <router-outlet></router-outlet>
+    <app-totals *ngIf="!hasRoute('/')"></app-totals>
 </div>
 
 <div class="container">
