@@ -4,7 +4,8 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+
+export class StocksService {
 
   apiKey = 'API_KEY2bHQJYIDNLY33ESMNJO7XI7OXJZX1VUR'
 

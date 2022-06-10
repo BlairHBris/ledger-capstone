@@ -1,5 +1,9 @@
+.stocks{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
-div {
+.stock {
     margin: .5em;
     margin-bottom: 1.5em;
     padding: 1.5em;
