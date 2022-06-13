@@ -28,9 +28,4 @@ export class DetailedStockComponent implements OnInit {
       alert('Stock Ticker invalid, please retry.')
     })
   }
-
-
-
-
-
 }
