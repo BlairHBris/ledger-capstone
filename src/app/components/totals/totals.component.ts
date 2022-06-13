@@ -28,7 +28,7 @@ export class TotalsComponent implements OnInit {
       this.checkingTransactions.forEach((transaction) => {
         this.checkingTotal += transaction.amount
       })
-      this.creditTransactions = response.transactions.filter(t => t.account=='Credit')
+      this.creditTransactions = response.transactions.filter(t => t.account=='Credit Card')
       this.creditTransactions.forEach((transaction) => {
         this.creditTotal += transaction.amount
       })
