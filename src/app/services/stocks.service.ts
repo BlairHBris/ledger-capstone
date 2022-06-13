@@ -12,6 +12,6 @@ export class StocksService {
   constructor(private httpClient: HttpClient) {}
 
   public getStocks() {
-    return this.httpClient.get(`https://api.finage.co.uk/last/stocks/?symbols=AAPL,TSLA,GOGL&apikey=${this.apiKey}`)
+    return this.httpClient.get(`https://api.finage.co.uk/last/stocks/?symbols=SPY,FB,AMZN,AAPL,NFLX,GOOG&apikey=${this.apiKey}`)
   }
 }
