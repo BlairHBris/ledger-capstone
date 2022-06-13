@@ -20,6 +20,7 @@ export class DetailedStockComponent implements OnInit {
   displayStock({ stock } : {stock: string}) {
     this.stocksService.getdetailedStock(stock).subscribe((response: any) => {
       this.stocks = response
+      this.stock = ''
       this.showDetailedStock = true
     })
   }
