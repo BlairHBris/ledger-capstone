@@ -22,6 +22,10 @@ export class DetailedStockComponent implements OnInit {
       this.stocks = response
       this.stock = ''
       this.showDetailedStock = true
+    }, 
+    (error) => {
+      console.error('error caught in component')
+      alert('Stock Ticker invalid, please retry.')
     })
   }
 
