@@ -23,6 +23,7 @@ body {
     padding-left: 2em;
     padding-right: 2em;
     border-radius: 5px;
+    margin-bottom: 3em;
 }
 
 
@@ -103,9 +104,11 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    .grid-item {
+    .grid-item,
+    .grid-continer {
         font-size: .75em;
     }
+
     .container {
         max-width: 50em;
         margin: 2em auto;
@@ -113,8 +116,18 @@ body {
         min-height: 10em;
         border: 0px;
         padding: 2em;
+        margin-bottom: 3em;
     }
-    .form-area input {
+
+    .form-area input,
+    .stock-area input {
         font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .grid-item,
+    .grid-contianer {
+        font-size: .5em;
     }
 }

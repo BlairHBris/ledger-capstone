@@ -11,3 +11,10 @@
     box-shadow: 5px 10px rgb(193, 193, 193);
     border-radius: 5px;
 }
+
+@media only screen and (max-width: 600px) {
+    .stocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
