@@ -24,6 +24,7 @@ import { TotalsComponent } from './components/totals/totals.component';
 import { ColumnHeadersComponent } from './components/column-headers/column-headers.component';
 import { TableHeadingComponent } from './components/table-heading/table-heading.component';
 import { StocksComponent } from './components/stocks/stocks.component';
+import { DetailedStockComponent } from './components/detailed-stock/detailed-stock.component';
 
 const appRoutes: Routes = [
   {path:'', component: LinksComponent},
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     ColumnHeadersComponent,
     TableHeadingComponent,
     StocksComponent,
+    DetailedStockComponent,
   ],
   imports: [
     BrowserModule,

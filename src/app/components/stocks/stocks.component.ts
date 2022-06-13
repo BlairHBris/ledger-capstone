@@ -19,7 +19,6 @@ export class StocksComponent implements OnInit {
 }
 /*
     this.stocksService.getStocks().subscribe((response: any) => {
-      console.log(response)
       this.stocks = response
     })
     */
