@@ -16,14 +16,4 @@ export class TableHeadingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addTransaction(transaction: Transaction) {
-    this.transactionService.addTransaction(transaction).subscribe(response => {
-      this.transactions = [...this.transactions, response.transaction].sort((a, b) => {
-        const da = new Date(a.date)
-        const db = new Date(b.date)
-        return da.getTime() - db.getTime()
-      })
-    })
-  }
-
 }
