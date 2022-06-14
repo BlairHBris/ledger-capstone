@@ -26,4 +26,14 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  requestKey() {
+    const entry = prompt("Please provide your authorization")
+    if (entry === 'Ravens') {
+      this.loginService.generateKey()
+    }
+    else {
+      alert('Authorization failed. Please try again.')
+    }
+  }
+
 }
