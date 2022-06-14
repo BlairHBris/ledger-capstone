@@ -5,3 +5,7 @@
 .debit {
     background-color: rgb(247, 233, 236);
 }
+
+fa-icon:hover {
+    cursor: pointer;
+}

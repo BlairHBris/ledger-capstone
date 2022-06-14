@@ -3,5 +3,5 @@
     <a routerLink="../credits">Credits</a>
     <a routerLink="../debits">Debits</a>
     <a *ngIf="!hasRoute('/home')" routerLink="/home">Close Out</a>
-    <a *ngIf="hasRoute('/home')" routerLink="/">Log Out</a>
+    <a *ngIf="hasRoute('/home')" (click)="verify()">Log Out</a>
 </div>

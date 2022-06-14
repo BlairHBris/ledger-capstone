@@ -21,8 +21,13 @@ export class TransactionItemComponent implements OnInit {
 
   faTimes = faTimes;
 
-  delete(transaction: any) {
-    this.deleteTransaction.emit(transaction)
+  confirm(transaction:any) {
+    const entry = prompt("Type 'Yes' to confirm deletion, this cannot be undone.")
+    if (entry === 'Yes') {
+      this.deleteTransaction.emit(transaction)
+    }
+    else {
+      alert('Deletion failed. Please try again.')
+    }
   }
-
 }

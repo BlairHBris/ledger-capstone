@@ -4,7 +4,6 @@
     <div class="grid-item">{{transaction?.description}}</div>
     <div class="grid-item right">
         ${{transaction?.amount}}
-        <fa-icon (click)="delete(transaction)" [ngStyle]="{'color': 'red', 'padding-left': '1em'}" [icon]="faTimes"></fa-icon>
-
+        <fa-icon (click)="confirm(transaction)" [ngStyle]="{'color': 'rgb(150, 150, 150)', 'padding-left': '1em'}" [icon]="faTimes"></fa-icon>
     </div>
 </div>

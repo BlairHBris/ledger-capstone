@@ -1,26 +1,28 @@
 div {
-    background-color: #e4e7ea;
+    background-color: rgb(230, 230, 230);
     display: flex;
-    border: 1px rgb(206, 206, 206) solid;
+    border: 1px rgb(175, 175, 175) solid;
 }
 
 a {
     text-align: center;
     text-decoration: none;
     font-size: 1.5em;
-    color: rgb(124, 124, 124);
+    color: black;
     padding: .25em .75em;
     cursor: pointer;
 }
 
 a:hover {
-    background-color: #dcdcdd;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color:black;
 }
 
 .active {
-    background-color: #969697;
+    background-color: rgb(175, 175, 175);
     border-radius: 5px;
-    color:rgb(206, 206, 206)
+    color:white
 }
 
 @media only screen and (max-width: 600px) {
