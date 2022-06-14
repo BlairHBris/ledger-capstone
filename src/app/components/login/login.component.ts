@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   loginCheck({ privateKey } : {privateKey: string}) {
     if(this.loginService.checkKeys(privateKey)) {
-      this.router.navigate(['/transactions'])
+      this.router.navigate(['/home'])
     }
     else {
       alert('The entered key is invalid. Please try again.')

@@ -28,7 +28,8 @@ import { DetailedStockComponent } from './components/detailed-stock/detailed-sto
 import { LoginComponent } from './components/login/login.component';
 
 const appRoutes: Routes = [
-  {path:'', component: LinksComponent},
+  {path:'', component: LoginComponent},
+  {path:'home', component: LinksComponent},
   {path:'transactions', component: TransactionsComponent},
   {path:'credits', component: CreditsComponent},
   {path:'debits', component: DebitsComponent},
@@ -36,7 +37,6 @@ const appRoutes: Routes = [
   {path:'checking', component: CheckingComponent},
   {path:'investment', component: InvestmentComponent},
   {path:'savings', component: SavingsComponent},
-  {path:'login', component: LoginComponent},
   {path:'**', pathMatch: 'full', component: PageNotFoundComponent}
 ]
 

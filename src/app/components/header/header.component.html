@@ -1,9 +1,10 @@
 <header>
     <h1>{{ title }}</h1>
     <app-button 
-    *ngIf="!hasRoute('/')" 
+    *ngIf="!hasRoute('/home')" 
     color = "{{showAddTransaction ? 'red': 'rgb(3, 180, 3'}}"
     text="{{showAddTransaction ? 'Close Form': 'Add Transaction'}}"
     (buttonClick)="toggleAddTransaction()"
     ></app-button>
 </header>
+<app-links *ngIf="!hasRoute('/home')"></app-links>
