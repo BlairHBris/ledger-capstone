@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   requestKey() {
-    const entry = prompt("Please provide your authorization")
+    const entry = prompt("Please provide your authorization (Ravens)")
     if (entry === 'Ravens') {
       this.loginService.generateKey()
     }
