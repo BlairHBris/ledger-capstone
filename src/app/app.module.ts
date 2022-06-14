@@ -25,6 +25,7 @@ import { ColumnHeadersComponent } from './components/column-headers/column-heade
 import { TableHeadingComponent } from './components/table-heading/table-heading.component';
 import { StocksComponent } from './components/stocks/stocks.component';
 import { DetailedStockComponent } from './components/detailed-stock/detailed-stock.component';
+import { LoginComponent } from './components/login/login.component';
 
 const appRoutes: Routes = [
   {path:'', component: LinksComponent},
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
   {path:'checking', component: CheckingComponent},
   {path:'investment', component: InvestmentComponent},
   {path:'savings', component: SavingsComponent},
+  {path:'login', component: LoginComponent},
   {path:'**', pathMatch: 'full', component: PageNotFoundComponent}
 ]
 
@@ -60,6 +62,7 @@ const appRoutes: Routes = [
     TableHeadingComponent,
     StocksComponent,
     DetailedStockComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

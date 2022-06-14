@@ -1,0 +1,7 @@
+<h1>Login to Your Ledger</h1>
+<form #loginForm="ngForm" (ngSubmit)="loginCheck(loginForm.value)">
+    <div class="stock-area">
+        <input type="text" name="privateKey" [(ngModel)]="privateKey" id="privateKey" placeholder="Enter Your Private Key">
+        <input type="submit" value="Login" class="button button-block">
+    </div>
+</form>
