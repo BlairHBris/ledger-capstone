@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DetailedStock } from 'src/app/DetailedStock';
 import { StocksService } from 'src/app/services/stocks.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { StocksService } from 'src/app/services/stocks.service';
 export class DetailedStockComponent implements OnInit {
 
   stock: string | undefined
-  stocks: any
+  stocks: DetailedStock | undefined
   showDetailedStock: boolean = false
 
   constructor(private stocksService: StocksService) {}

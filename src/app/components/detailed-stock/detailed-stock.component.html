@@ -7,11 +7,11 @@
 </form>
 <div class="stocks" *ngIf="showDetailedStock">
     <div class="stock">
-        <h2>{{stocks.s}}</h2>
-        <h2>Last Price: ${{stocks.lp}}</h2>
-        <h2>Daily Change: {{stocks.cpd}}%</h2>
-        <h2>Weekly Change: {{stocks.cpw}}%</h2>
-        <h2>Monthly Change: {{stocks.cpm}}%</h2>
-        <h2>Yearly Change: {{stocks.cpy}}%</h2>
+        <h2>{{stocks?.s}}</h2>
+        <h2>Last Price: ${{stocks?.lp}}</h2>
+        <h2>Daily Change: {{stocks?.cpd}}%</h2>
+        <h2>Weekly Change: {{stocks?.cpw}}%</h2>
+        <h2>Monthly Change: {{stocks?.cpm}}%</h2>
+        <h2>Yearly Change: {{stocks?.cpy}}%</h2>
     </div>
 </div>
