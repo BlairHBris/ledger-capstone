@@ -23,6 +23,20 @@ export class TotalsComponent implements OnInit {
   constructor(private transactionService: TransactionService) {}
 
   ngOnInit(): void {
+    this.getTotals()
+  }
+
+  getTotals() {
+    this.checkingTotal = 0
+    this.checkingTransactions = []
+    this.creditTotal = 0
+    this.creditTransactions = []
+    this.investmentTotal = 0
+    this.investmentTransactions = []
+    this.savingsTotal = 0
+    this.savingsTransactions = []
+    this.total = 0
+    
     this.transactionService.getTransactions().subscribe(response => {
       this.checkingTransactions = response.transactions.filter(t => t.account=='Checking')
       this.checkingTransactions.forEach((transaction) => {
