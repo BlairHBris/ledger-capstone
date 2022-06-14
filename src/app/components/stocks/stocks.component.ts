@@ -15,11 +15,36 @@ export class StocksComponent implements OnInit {
   constructor(private stocksService: StocksService) { }
 
   ngOnInit(): void {
-
-  }
-}
-/*
     this.stocksService.getStocks().subscribe((response: any) => {
       this.stocks = response
     })
+  }
+}
+/*
+<div class="stocks">
+    <div class="stock">
+        <h2>Testing</h2>
+        <h2>Stocks</h2>
+    </div>
+    <div class="stock">
+        <h2>Testing</h2>
+        <h2>Stocks</h2>
+    </div>
+    <div class="stock">
+        <h2>Testing</h2>
+        <h2>Stocks</h2>
+    </div>
+    <div class="stock">
+        <h2>Testing</h2>
+        <h2>Stocks</h2>
+    </div>
+    <div class="stock">
+        <h2>Testing</h2>
+        <h2>Stocks</h2>
+    </div>
+    <div class="stock">
+        <h2>Testing</h2>
+        <h2>Stocks</h2>
+    </div>
+</div>
     */
