@@ -1,4 +1,4 @@
-<h2>Detailed Stock Information</h2>
+<h1>Detailed Stock Information</h1>
 <form #detailedStockForm="ngForm" (ngSubmit)="displayStock(detailedStockForm.value)">
     <div class="stock-area">
         <input type="text" name="stock" [(ngModel)]="stock" id="text" placeholder="Enter Stock Ticker">
@@ -7,11 +7,11 @@
 </form>
 <div class="stocks" *ngIf="showDetailedStock">
     <div class="stock">
-        <h3>{{stocks.s}}</h3>
-        <h3>Last Price: ${{stocks.lp}}</h3>
-        <h3>Daily Change: {{stocks.cpd}}%</h3>
-        <h3>Weekly Change: {{stocks.cpw}}%</h3>
-        <h3>Monthly Change: {{stocks.cpm}}%</h3>
-        <h3>Yearly Change: {{stocks.cpy}}%</h3>
+        <h2>{{stocks.s}}</h2>
+        <h2>Last Price: ${{stocks.lp}}</h2>
+        <h2>Daily Change: {{stocks.cpd}}%</h2>
+        <h2>Weekly Change: {{stocks.cpw}}%</h2>
+        <h2>Monthly Change: {{stocks.cpm}}%</h2>
+        <h2>Yearly Change: {{stocks.cpy}}%</h2>
     </div>
 </div>

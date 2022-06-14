@@ -29,7 +29,7 @@ body {
 
 .button {
     display: inline-block;
-    background: rgb(170, 170, 170);
+    background-color: rgb(206, 206, 206);
     border: none;
     padding: .75em 1em;
     margin: .5em;
@@ -47,7 +47,7 @@ body {
     margin-left: 0;
     margin-bottom: 1em;
     margin-right: 0;
-    color: rgb(159, 218, 159);
+    color: rgb(3, 180, 3);
 }
 
 .form-area {
@@ -89,9 +89,18 @@ body {
 }
 
 .grid-item {
-    border: 1px solid rgb(139, 139, 139);
-    text-align: center;
+    border: 1px solid rgb(206, 206, 206);
     padding: .25em;
+    text-align: left;
+    color: rgb(134, 134, 134);
+}
+
+.right {
+    text-align: right;
+}
+
+.headers {
+    color: rgb(124, 124, 124);
 }
 
 .stock-area input {

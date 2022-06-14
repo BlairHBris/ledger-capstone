@@ -1,14 +1,14 @@
 div {
     background-color: #e4e7ea;
     display: flex;
-    border: 1px rgb(139, 139, 139) solid;
+    border: 1px rgb(206, 206, 206) solid;
 }
 
 a {
     text-align: center;
     text-decoration: none;
     font-size: 1.5em;
-    color: black;
+    color: rgb(124, 124, 124);
     padding: .25em .75em;
     cursor: pointer;
 }
@@ -18,8 +18,9 @@ a:hover {
 }
 
 .active {
-    background-color: #b5b5b6;
+    background-color: #969697;
     border-radius: 5px;
+    color:rgb(206, 206, 206)
 }
 
 @media only screen and (max-width: 600px) {

@@ -12,6 +12,14 @@
     border-radius: 5px;
 }
 
+h1 {
+    color: rgb(94, 94, 94);
+}
+
+h2 {
+    color: rgb(124, 124, 124);
+}
+
 @media only screen and (max-width: 600px) {
     .stocks {
         display: grid;

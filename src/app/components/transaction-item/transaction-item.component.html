@@ -2,8 +2,9 @@
     <div class="grid-item">{{transaction?.date}}</div>
     <div class="grid-item">{{transaction?.account}}</div>
     <div class="grid-item">{{transaction?.description}}</div>
-    <div class="grid-item">
+    <div class="grid-item right">
         ${{transaction?.amount}}
-        <fa-icon (click)="delete(transaction)" [ngStyle]="{'color': 'red', 'position': 'relative', 'left': '.5em'}" [icon]="faTimes"></fa-icon>
+        <fa-icon (click)="delete(transaction)" [ngStyle]="{'color': 'red', 'padding-left': '1em'}" [icon]="faTimes"></fa-icon>
+
     </div>
 </div>
