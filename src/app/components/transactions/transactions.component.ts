@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Transaction } from 'src/app/Transaction';
-import { TransactionService} from '../../services/transaction.service';
+import { TransactionService } from '../../services/transaction.service';
 
 @Component({
   selector: 'app-transactions',
@@ -11,7 +11,7 @@ export class TransactionsComponent implements OnInit {
 
   transactions: Transaction[] = [];
 
-  constructor(private transactionService: TransactionService) {}
+  constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
     this.transactionService.getTransactions().subscribe(response => this.transactions = response.transactions.sort((a, b) => {
@@ -23,7 +23,7 @@ export class TransactionsComponent implements OnInit {
 
   deleteTransaction(transaction: Transaction) {
     this.transactionService.deleteTransaction(transaction)
-    .subscribe(() => this.transactions = this.transactions.filter(t => t.id !== transaction.id))
+      .subscribe(() => this.transactions = this.transactions.filter(t => t.id !== transaction.id))
   }
 
   addTransaction(transaction: Transaction) {
@@ -34,5 +34,10 @@ export class TransactionsComponent implements OnInit {
         return da.getTime() - db.getTime()
       })
     })
+  }
+
+  updateTransaction(updatedTransaction: Transaction, transaction: Transaction) {
+    this.transactionService.updateTransaction(updatedTransaction, transaction).subscribe(() =>
+    console.log('Complete'))
   }
 }
