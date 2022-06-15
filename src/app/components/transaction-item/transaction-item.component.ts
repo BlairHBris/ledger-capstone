@@ -58,10 +58,14 @@ export class TransactionItemComponent implements OnInit {
             } else {
               this.credit = false
             }
-          }
-        }
+          } else {
+            alert('Invalid amount. Please try again.')
+          } 
+        } else {
+          alert('Invalid description. Please try again.')
+        } 
       } else {
-        alert('Invalid Account name. Please try again.')
+        alert('Invalid account name. Please try again.')
       }
     }
     if (this.date && this.account && this.text && this.amount && this.credit) {
