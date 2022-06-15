@@ -10,7 +10,14 @@ Project Link: https://ledger-by-bb.netlify.app/
 
 Backend Code Link : https://github.com/BlairHBris/ledger-capstone-backend
 
-![](https://i2.paste.pics/H7Q7P.png)
+Login Screen
+![](https://i2.paste.pics/H94TA.png)
+
+Ledger
+![](https://i2.paste.pics/H94TJ.png)
+
+Stocks
+![](https://i2.paste.pics/H94TY.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
 
