@@ -37,4 +37,9 @@ export class CheckingComponent implements OnInit {
       })
     })
   }
+
+  updateTransaction(updatedTransaction: Transaction, transaction: Transaction) {
+    this.transactionService.updateTransaction(updatedTransaction, transaction).subscribe(() =>
+    console.log('Complete'))
+  }
 }

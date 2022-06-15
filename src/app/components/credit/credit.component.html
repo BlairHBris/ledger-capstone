@@ -4,4 +4,5 @@
 *ngFor="let transaction of transactions"
 [transaction]="transaction" 
 (deleteTransaction)="deleteTransaction(transaction)"
+(updateTransaction)="updateTransaction($event, transaction)"
 ></app-transaction-item>
