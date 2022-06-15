@@ -18,13 +18,7 @@ export class LinksComponent implements OnInit {
   }
 
   verify() {
-    const entry = prompt("Are you sure you want to log out? Type 'yes' to continue.")
-    if (entry === 'yes') {
-      this.router.navigate(['/'])
-    }
-    else {
-      alert('Log out failed. Please try again.')
-    }
+    confirm("Are you sure you want to log out?")
   }
 }
 

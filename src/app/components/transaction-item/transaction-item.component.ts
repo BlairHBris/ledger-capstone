@@ -31,42 +31,64 @@ export class TransactionItemComponent implements OnInit {
   faPencil = faPencil;
 
   confirmDeletion(transaction: any) {
-    const entry = prompt("Type 'Yes' to confirm deletion, this cannot be undone.")
-    if (entry === 'Yes') {
+    const entry = confirm("Are you sure you want to delete this transaction? This cannot be undone.")
+    if (entry == true) {
       this.deleteTransaction.emit(transaction)
-    }
-    else {
-      alert('Deletion failed. Please try again.')
     }
   }
 
   updateEntry(transaction: any) {
-    let entry = prompt('Please enter updated date in YYYY-MM-DD format')
-    if (entry) {
-      this.date = entry
-      entry = prompt('Please enter updated account')
-      if (entry && entry == 'Checking' || entry == 'Credit Card' || entry == 'Investment' || entry == 'Savings' ) {
-        this.account = entry
-        entry = prompt('Please enter updated description')
+    let confirmation = confirm('Do you want to update the Date of this transaction?')
+    switch (confirmation) {
+      case true:
+        let entry = prompt('Please enter updated date in YYYY-MM-DD format.')
+        if (entry) {
+          this.date = entry
+        }
+        break
+      case false:
+        this.date = transaction.date
+    }
+    confirmation = confirm('Do you want to update the Account for this transaction?')
+    switch (confirmation) {
+      case true:
+        let entry = prompt('Please enter updated account.')
+        if (entry && entry == 'Checking' || entry == 'Credit Card' || entry == 'Investment' || entry == 'Savings') {
+          this.account = entry
+        } else {
+          alert("Invalid Account entered. Please try again.")
+        }
+        break
+      case false:
+        this.account = transaction.account
+    }
+    confirmation = confirm('Do you want to update the Description for this transaction?')
+    switch (confirmation) {
+      case true:
+        let entry = prompt('Please enter updated description.')
         if (entry) {
           this.text = entry
-          entry = prompt('Please enter updated amount')
-          if (entry) {
-            this.amount = Number(entry)
-            if (this.amount > 0) {
-              this.credit = true
-            } else {
-              this.credit = false
-            }
+        }
+        break
+      case false:
+        this.text = transaction.description
+    }
+    confirmation = confirm('Do you want to update the Amount for this transaction?')
+    switch (confirmation) {
+      case true:
+        let entry = prompt('Please enter updated amount.')
+        if (entry) {
+          this.amount = Number(entry)
+          if (this.amount >= 0) {
+            this.credit = true
           } else {
-            alert('Invalid amount. Please try again.')
-          } 
-        } else {
-          alert('Invalid description. Please try again.')
-        } 
-      } else {
-        alert('Invalid account name. Please try again.')
-      }
+            this.credit = false
+          }
+        }
+        break
+      case false:
+        this.amount = transaction.amount
+        this.credit = transaction.credit
     }
     if (this.date && this.account && this.text && this.amount && this.credit) {
       const updatedTransaction = {
@@ -77,6 +99,6 @@ export class TransactionItemComponent implements OnInit {
         credit: this.credit
       }
       this.updateTransaction.emit(updatedTransaction)
-    }
   }
+}
 }
