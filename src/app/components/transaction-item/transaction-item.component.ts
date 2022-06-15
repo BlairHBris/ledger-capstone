@@ -41,11 +41,11 @@ export class TransactionItemComponent implements OnInit {
   }
 
   updateEntry(transaction: any) {
-    let entry = prompt('Please enter updated date')
+    let entry = prompt('Please enter updated date in YYYY-MM-DD format')
     if (entry) {
       this.date = entry
       entry = prompt('Please enter updated account')
-      if (entry) {
+      if (entry && entry == 'Checking' || entry == 'Credit Card' || entry == 'Investment' || entry == 'Savings' ) {
         this.account = entry
         entry = prompt('Please enter updated description')
         if (entry) {
@@ -60,6 +60,8 @@ export class TransactionItemComponent implements OnInit {
             }
           }
         }
+      } else {
+        alert('Invalid Account name. Please try again.')
       }
     }
     if (this.date && this.account && this.text && this.amount && this.credit) {
