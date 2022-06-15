@@ -1,7 +1,7 @@
 div {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(240, 240, 240);
     display: flex;
-    border: 1px rgb(175, 175, 175) solid;
+    border: 1px rgb(210, 210, 210) solid;
 }
 
 a {
