@@ -47,7 +47,6 @@ export class TransactionService {
     transaction.amount = updatedTransaction.amount
     transaction.credit = updatedTransaction.credit
     updatedTransaction.id = transaction.id
-    console.log(updatedTransaction)
     return this.http.put(`${this.apiUrl}/${updatedTransaction.id}`, updatedTransaction, httpOptions)
   }
 

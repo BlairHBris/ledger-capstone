@@ -90,7 +90,8 @@ export class TransactionItemComponent implements OnInit {
         this.amount = transaction.amount
         this.credit = transaction.credit
     }
-    if (this.date && this.account && this.text && this.amount && this.credit) {
+    
+    if (this.date && this.account && this.text && this.amount) {
       const updatedTransaction = {
         date: this.date,
         account: this.account,
@@ -99,6 +100,6 @@ export class TransactionItemComponent implements OnInit {
         credit: this.credit
       }
       this.updateTransaction.emit(updatedTransaction)
+    }
   }
-}
 }
