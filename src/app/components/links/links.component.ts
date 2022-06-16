@@ -18,7 +18,12 @@ export class LinksComponent implements OnInit {
   }
 
   verify() {
-    confirm("Are you sure you want to log out?")
+    let verify = confirm("Are you sure you want to log out?")
+    switch (verify) {
+      case true:
+        this.router.navigate(['/'])
+    }
+    
   }
 }
 

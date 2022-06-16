@@ -48,4 +48,6 @@ export class StocksComponent implements OnInit {
     </div>
 </div>
 
+
+
     */
