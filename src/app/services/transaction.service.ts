@@ -40,14 +40,15 @@ export class TransactionService {
     return this.http.post<TransactionResponse>(this.apiUrl, transaction, httpOptions)
   }
 
-  updateTransaction(updatedTransaction: Transaction, transaction: Transaction) {
+  updateTransaction(transaction: Transaction, updatedTransaction: Transaction) {
     transaction.date = updatedTransaction.date
     transaction.account = updatedTransaction.account
     transaction.description = updatedTransaction.description
     transaction.amount = updatedTransaction.amount
     transaction.credit = updatedTransaction.credit
     updatedTransaction.id = transaction.id
-    return this.http.put(`${this.apiUrl}/${transaction.id}`, transaction, httpOptions)
+    console.log(updatedTransaction)
+    return this.http.put(`${this.apiUrl}/${updatedTransaction.id}`, updatedTransaction, httpOptions)
   }
 
 }

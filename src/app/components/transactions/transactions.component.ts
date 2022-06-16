@@ -36,7 +36,7 @@ export class TransactionsComponent implements OnInit {
     })
   }
 
-  updateTransaction(updatedTransaction: Transaction, transaction: Transaction) {
-    this.transactionService.updateTransaction(updatedTransaction, transaction).subscribe()
+  updateTransaction(transaction: Transaction, updatedTransaction: Transaction) {
+    this.transactionService.updateTransaction(transaction, updatedTransaction).subscribe()
   }
 }
